@@ -31,3 +31,10 @@ I was running this code on CPU. This is why just 1000 images were tested. I was 
 The code contains the same nn.py file as in the weight-normalization code. However I am not using any of Weight-Normalization, Batch-normalization initialization for training this code. They are set to false. The only function parameter I use for creating the model template was the use_bias and the use_xavier_initialization parameters. At the last layer use_bias was set to false, and when training the latter parameter was set to true (Xavier initialization and Adam optimizer can work together quite well).
 
 More snapshot from about the training steps can be seen in training_snapshots folder. 
+
+Implementations and links that I was found useful:
+  - https://github.com/EncodeTS/TensorFlow_Center_Loss
+  - https://github.com/ydwen/caffe-face
+  - https://github.com/pangyupo/mxnet_center_loss
+  - https://github.com/ydwen/caffe-face (Author implementation in C++) 
+
