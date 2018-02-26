@@ -11,6 +11,9 @@ https://ydwen.github.io/papers/WenECCV16.pdf
 Tensorflow Version: 1.5
 
 
+<p align="center">
+  <img src="https://github.com/zoli333/Center-Loss/tree/master/training_snapshots/11800.png" width="350"/> 
+  Result after 11800 iteration step (which roughly 21 epoch)
+</p>
 
-![Result after 11800 iteration step (which roughly 21 epoch)](https://github.com/zoli333/Center-Loss/tree/master/training_snapshots/11800.png)
 
