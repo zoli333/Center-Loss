@@ -34,7 +34,6 @@ More snapshot from about the training steps can be seen in training_snapshots fo
 
 Implementations and links that I found useful:
   - https://github.com/EncodeTS/TensorFlow_Center_Loss
-  - https://github.com/ydwen/caffe-face
   - https://github.com/pangyupo/mxnet_center_loss
   - https://github.com/ydwen/caffe-face (Authors implementation in C++) 
 
