@@ -11,7 +11,9 @@ https://ydwen.github.io/papers/WenECCV16.pdf
 Tensorflow Version: 1.5
 
 Mnist train-dataset: 55000 training examples
+
 Mnist test-dataset: 10000 training examples
+
 Used from tensorflow examples.
 
 Result after 13000 iteration (which is roughly 23 epoch):
