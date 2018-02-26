@@ -32,7 +32,7 @@ The code contains the same nn.py file as in the weight-normalization code. Howev
 
 More snapshot from about the training steps can be seen in training_snapshots folder. 
 
-Implementations and links that I was found useful:
+Implementations and links that I found useful:
   - https://github.com/EncodeTS/TensorFlow_Center_Loss
   - https://github.com/ydwen/caffe-face
   - https://github.com/pangyupo/mxnet_center_loss
