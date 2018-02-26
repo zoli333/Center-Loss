@@ -26,7 +26,7 @@ Crucial steps were for the successful training:
  - rescale the training examples from \[0,255\] to \[-1,1\] range
  
  
-I was running this code on CPU. This is why just 1000 images were tested. I was tried this out with 10000 examples, but my memory was not enough. The training on intel-i5 processor single core was took about 1 day to train.
+I was running this code on CPU (5 year old laptop). This is why just 1000 images were tested. I was tried this out with 10000 examples for plotting, but my memory was not enough. The training happened on an old intel-i5 processor single core, that was took about 1 day to train.
 
 The code contains the same nn.py file as in the weight-normalization code. However I am not using any of Weight-Normalization, Batch-normalization initialization for training this code. They are set to false. The only function parameter I use for creating the model template was the use_bias and the use_xavier_initialization parameters. At the last layer use_bias was set to false, and when training the latter parameter was set to true (Xavier initialization and Adam optimizer can work together quite well).
 
@@ -38,5 +38,19 @@ Implementations and links that I found useful:
   - https://github.com/pangyupo/mxnet_center_loss
   - https://github.com/ydwen/caffe-face (Authors implementation in C++) 
 
-Notes: The code is not using weight normalization nor mean only batch normalization nor initialization. I should (have been) try this, whether it can accelerate the training. I do think initialization here would be very useful (avoiding dead clusters). So every normalization technique could be helpful.
+Notes: The code is not using weight normalization nor mean only batch normalization nor initialization. I should (have been) try this out, whether it can accelerate the training. I do think initialization here would be very useful (avoiding dead clusters). So every normalization technique could be very helpful to accelerate the training.
+
+About the training loss:
+
+    200:  2.3
+    5000: 1.2
+    10000: 0.7
+    14200: 0.4
+
+I assume at about 5000-6000 step the loss should have been divided to half, because it was platoed. Some bad news: I printed out the training losses on my terminal directly (didnt saved). And when I stopped the training I accidentally quit from this terminal, so my complete loss history was lost .... So I am not able to enclose this, however the pictures were saved...
+
+
+
+
+
 
