@@ -10,8 +10,7 @@ https://ydwen.github.io/papers/WenECCV16.pdf
 
 Tensorflow Version: 1.5
 
-Mnist train-dataset: 55000 training examples
-
+Mnist train-dataset: 55000 training examples </br>
 Mnist test-dataset: 10000 training examples
 
 Used from tensorflow examples.
