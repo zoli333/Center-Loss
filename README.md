@@ -48,7 +48,7 @@ About the training loss:
 
 I assume at about 5000-6000 step the loss should have been divided to half, because it was platoed.
 
-###Some bad news: 
+## Some bad news: 
 
 I had printed out the training losses on my terminal directly (didnt saved). And when I stopped the training I accidentally quit from this terminal, so my complete loss history was lost .... So I am not able to enclose this, however the pictures were saved...
 
