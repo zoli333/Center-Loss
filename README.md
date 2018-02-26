@@ -1,5 +1,5 @@
 # Center-Loss
-This is an implementation of the Center Loss article (2016)
+This is an implementation of the Center Loss article (2016) trained on MNist dataset.
 
 Paper:
 A Discriminative Feature Learning Approach
@@ -14,8 +14,16 @@ Mnist train-dataset: 55000 training examples
 Mnist test-dataset: 10000 training examples
 Used from tensorflow examples.
 
-
 Result after 13000 iteration (which is roughly 23 epoch):
 
 ![13000.png](https://user-images.githubusercontent.com/13023894/36691720-5b842862-1b36-11e8-9d1e-84e212f8ed9f.png)
 
+The above snapshot was taken from a random 1000 training examples. The database was trained with AdamOptimizer.
+
+Crucial steps were for the successful training:
+ - remove the bias term from the last layer (before cross entropy)
+ - training with 0.0005 learning rate instead of 0.001
+ - rescale the training examples from \[0,255\] to \[-1,1\] range
+ 
+ 
+ 
