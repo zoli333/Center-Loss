@@ -36,5 +36,7 @@ Implementations and links that I found useful:
   - https://github.com/EncodeTS/TensorFlow_Center_Loss
   - https://github.com/ydwen/caffe-face
   - https://github.com/pangyupo/mxnet_center_loss
-  - https://github.com/ydwen/caffe-face (Author implementation in C++) 
+  - https://github.com/ydwen/caffe-face (Authors implementation in C++) 
+
+Notes: The code is not using weight normalization nor mean only batch normalization nor initialization. I should (have been) try this, whether it can accelerate the training. I do think initialization here would be very useful (avoiding dead clusters). So every normalization technique could be helpful.
 
