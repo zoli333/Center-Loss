@@ -13,12 +13,8 @@ mnist = input_data.read_data_sets("MNIST_data/", one_hot=False, dtype=dtypes.uin
 
 train_data = np.asarray(mnist.train.images, dtype=np.float32)
 train_labels = np.asarray(mnist.train.labels, dtype=np.int32)
-#train_mean = np.mean(train_data)
-#train_std = np.std(train_data)
-#train_data = (train_data - train_mean) / train_std
 test_data = np.asarray(mnist.test.images, np.float32)
 test_labels = np.asarray(mnist.test.labels, dtype=np.int32)
-#test_data = (test_data - train_mean) / train_std
 
 
 train_data = (train_data - 127.5) * 0.0078125
@@ -26,13 +22,10 @@ test_data = (test_data - 127.5) * 0.0078125
 
 print train_data.min()
 print train_data.max()
-
 print test_data.min()
 print test_data.max()
-
 print train_data.std()
 print test_data.std()
-
 
 
 train_data = train_data.reshape((-1,28,28,1))
@@ -88,6 +81,7 @@ def center_loss(embedding, labels, num_classes, name=''):
         centroids_delta = centroids_delta.assign(tf.zeros([num_classes,num_features]))
         
         '''
+        # The same as with scatter_nd
         one_hot_labels = tf.one_hot(y,num_classes)
         labels_sum = tf.expand_dims(tf.reduce_sum(one_hot_labels,reduction_indices=[0]),-1)
         centroids = centroids.assign_sub(ALPHA * delta_c_nominator / (1.0 + labels_sum))
@@ -118,13 +112,11 @@ y_test = tf.placeholder(tf.float32,shape=[test_batch_size])
 
 softmax_out, embedding = model(x, use_xavier_initialization=True)
 
-# TODO
 center_loss_out, _ = center_loss(embedding, y, num_classes, 'CenterLoss')
 
 
 softmax_loss = tf.reduce_mean(tf.nn.sparse_softmax_cross_entropy_with_logits(
       labels=y, logits=softmax_out, name='cross_entropy'))
-
 
 
 total_loss = softmax_loss + LAMBDA * center_loss_out
