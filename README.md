@@ -47,7 +47,7 @@ About the training loss:
     10000: 0.7
     14200: 0.4
 
-I assume at about 5000-6000 step the loss should have been divided to half, because it was platoed.
+I assume at about 5000-6000 step the learning rate should have been divided to half, because it was platoed.
 
 
 
