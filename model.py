@@ -56,19 +56,19 @@ def model_spec(x, keep_prob=0.5, deterministic=False, init=False, use_weight_nor
     # embedding layer
     x = tf.reshape(x,[x.get_shape()[0],-1])
     
-    embed = nn.dense(x, 2, nonlinearity=None, init=False, 
-                                        use_weight_normalization=False, use_batch_normalization=False,
-                                        use_mean_only_batch_normalization=False,
-                                        deterministic=False,name='embedding_layer',use_xavier_initialization=use_xavier_initialization)
+    embed = nn.dense(x, 2, nonlinearity=None, init=init, 
+                                        use_weight_normalization=use_weight_normalization, use_batch_normalization=use_batch_normalization,
+                                        use_mean_only_batch_normalization=use_mean_only_batch_normalization,
+                                        deterministic=deterministic,name='embedding_layer',use_xavier_initialization=use_xavier_initialization)
     
     
     
     x = nn.PRelu(embed, name='embedding_layer/PRelu')
     
-    x = nn.dense(x, 10, nonlinearity=None, init=False, 
-                                        use_weight_normalization=False, use_batch_normalization=False,
-                                        use_mean_only_batch_normalization=False,
-                                        deterministic=False,name='output_dense',use_xavier_initialization=use_xavier_initialization,use_bias=False)
+    x = nn.dense(x, 10, nonlinearity=None, init=init, 
+                                        use_weight_normalization=use_weight_normalization, use_batch_normalization=use_batch_normalization,
+                                        use_mean_only_batch_normalization=use_mean_only_batch_normalization,
+                                        deterministic=deterministic,name='output_dense',use_xavier_initialization=use_xavier_initialization,use_bias=False)
     
     
     return x, embed
