@@ -19,7 +19,7 @@ Result after 13000 iteration (which is roughly 23 epoch):
 
 ![13000.png](https://user-images.githubusercontent.com/13023894/36691720-5b842862-1b36-11e8-9d1e-84e212f8ed9f.png)
 
-The above snapshot was made from a random 1000 training example at step 14200. For more snapshots about the training steps can be seen in training_snapshots folder.
+The above snapshot was made from a random 1000 training example at step 12400. For more snapshots about the training steps can be seen in training_snapshots folder.
 
 The database was trained with AdamOptimizer.
 
