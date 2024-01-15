@@ -30,6 +30,8 @@ print(coords)
 # test for all examples
 labels = labels.expand(100, 2)
 coords = torch.gather(centers, dim=0, index=labels)
+print("input shape", input.shape)
+print("coords shape: ", coords.shape)
 c = input - coords
 
 # loss function test
