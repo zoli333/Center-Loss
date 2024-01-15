@@ -2,7 +2,7 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 
-
+# create dummy input data
 # input [100, 2]
 # centers [10, 2]
 # labels [100, 10]
@@ -22,8 +22,7 @@ labels = labels.expand(100, 2)
 coords = torch.gather(centers, dim=0, index=labels)
 c = input - coords
 
-# norm test
-
+# loss function test
 dist = c.pow(2).sum()
 print(dist / c.size(0))
 
