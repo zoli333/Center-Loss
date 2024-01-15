@@ -23,12 +23,12 @@ coords = torch.gather(centers, dim=0, index=torch.tensor([[test_label]]))
 # just returns the x coordinate
 print(coords)
 
-# to get both x, y coordinates needs to expand the label dims
+# to get both x, y coordinates needs to expand the labels tensor (dim=1)
 coords = torch.gather(centers, dim=0, index=torch.tensor([[test_label, test_label]]))
 print(coords)
 
 # test for all examples
-labels = labels.expand(100, 2)
+labels = labels.expand(100, 2) # repeat the dim=1 in labels tensor
 coords = torch.gather(centers, dim=0, index=labels)
 print("input shape", input.shape)
 print("coords shape: ", coords.shape)
