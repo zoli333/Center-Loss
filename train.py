@@ -12,6 +12,9 @@ import os
 
 # https://blog.paperspace.com/writing-lenet5-from-scratch-in-python/
 
+# Device will determine whether to run the training on GPU or CPU.
+device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+
 
 class CenterLoss(nn.Module):
     def __init__(self, num_classes=10, feat=2):
@@ -20,8 +23,7 @@ class CenterLoss(nn.Module):
         # labels [batch_size, num_classes]
         # centers [num_classes, feat]
         self.feat = feat
-        self.centers = nn.Parameter(torch.randn(size=(num_classes, feat)).cuda())
-
+        self.centers = nn.Parameter(torch.randn(size=(num_classes, feat), device=device))
 
     def forward(self, x, labels):
         batch_size = x.size(0)
@@ -38,8 +40,6 @@ learning_rate = 0.001
 num_epochs = 150
 lam = 1.0
 
-# Device will determine whether to run the training on GPU or CPU.
-device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
 #Loading the dataset and preprocessing
 train_dataset = torchvision.datasets.MNIST(root = './data',
@@ -87,7 +87,9 @@ optimizer4center = optim.SGD(centerloss.parameters(), lr=0.5)
 
 total_step = len(train_loader)
 
-def visualize_neurons(all_features, step, viz_folder):
+
+def visualize_neurons(all_features, step, viz_folder, centers=None):
+    #print(centers)
     os.makedirs(viz_folder, exist_ok=True)
     with torch.no_grad():
         x = torch.cat(all_features, 0)
@@ -96,12 +98,17 @@ def visualize_neurons(all_features, step, viz_folder):
         y_ = x[:, 1]
         fig = plt.figure(figsize=(8, 8), facecolor='w', edgecolor='k')
         plt.scatter(x_, y_)
+        if centers is not None:
+            centers = centers.cpu()
+            c_x = centers[:, 0]
+            c_y = centers[:, 1]
+            plt.scatter(c_x, c_y, color='red')
         plt.axis('off')
         plt.savefig(viz_folder + "/result_" + str(step) + ".png")
         plt.close(fig)
 
 
-def test(model, step):
+def test(model, step, centers=None):
     # Test the model
     # In test phase, we don't need to compute gradients (for memory efficiency)
     with torch.no_grad():
@@ -118,7 +125,7 @@ def test(model, step):
             correct += (predicted == labels).sum().item()
 
         print('Accuracy of the network on the 10000 test images: {} %'.format(100 * correct / total))
-        visualize_neurons(all_features, step, "viz_test")
+        visualize_neurons(all_features, step, "viz_test", centers)
 
 
 if __name__ == "__main__":
@@ -151,7 +158,8 @@ if __name__ == "__main__":
 
         if (epoch + 1) % 10 == 0:
             step = epoch + 1
-            test(model, step)
-            visualize_neurons(all_features, step, "viz_train")
+            current_centers = centerloss.centers
+            test(model, step, current_centers)
+            visualize_neurons(all_features, step, "viz_train", current_centers)
 
         scheduler.step()
