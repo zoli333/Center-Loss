@@ -16,11 +16,12 @@ import os
 class CenterLoss(nn.Module):
     def __init__(self, num_classes=10, feat=2):
         super(CenterLoss, self).__init__()
-        self.feat = feat
-        self.centers = nn.Parameter(torch.randn(size=(num_classes, feat)).cuda())
         # input [batch_size, feat]
         # labels [batch_size, num_classes]
         # centers [num_classes, feat]
+        self.feat = feat
+        self.centers = nn.Parameter(torch.randn(size=(num_classes, feat)).cuda())
+
 
     def forward(self, x, labels):
         batch_size = x.size(0)
