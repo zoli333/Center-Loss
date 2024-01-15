@@ -20,13 +20,15 @@ class CenterLoss(nn.Module):
     def __init__(self, num_classes=10, feat=2):
         super(CenterLoss, self).__init__()
         # input [batch_size, feat]
-        # labels [batch_size, num_classes]
+        # labels [batch_size]
         # centers [num_classes, feat]
         self.feat = feat
         self.centers = nn.Parameter(torch.randn(size=(num_classes, feat), device=device))
 
     def forward(self, x, labels):
+        print(labels.shape)
         batch_size = x.size(0)
+        # extend dimension at dim = 1 and expand/repeat in this dimension
         labels = labels.unsqueeze(-1).expand(batch_size, self.feat)
         coords = torch.gather(self.centers, dim=0, index=labels)
         loss = (x - coords).pow(2).sum() / batch_size / 2.0
@@ -155,7 +157,6 @@ if __name__ == "__main__":
             if (i + 1) % total_step == 0:
                 print('Epoch [{}/{}], Step [{}/{}], Loss: {:.4f}'
                       .format(epoch + 1, num_epochs, i + 1, total_step, loss.item()))
-
         if (epoch + 1) % 10 == 0:
             step = epoch + 1
             current_centers = centerloss.centers
