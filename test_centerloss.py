@@ -5,7 +5,7 @@ import torch.nn.functional as F
 # create dummy input data
 # input [100, 2]
 # centers [10, 2]
-# labels [100, 10]
+# labels [100, 1]
 input = torch.randn((100, 2))
 centers = torch.randn((10, 2))
 labels = torch.argmax(F.softmax(torch.randn((100, 10)), dim=1), dim=1, keepdim=True)
@@ -14,8 +14,18 @@ labels = torch.argmax(F.softmax(torch.randn((100, 10)), dim=1), dim=1, keepdim=T
 # test for one example
 # i = 0
 x = input[0]
-label = labels[0]
-c = x - centers[label]
+test_label = labels[0]
+c = x - centers[test_label]
+
+test_label = 1
+print(centers[test_label])
+coords = torch.gather(centers, dim=0, index=torch.tensor([[test_label]]))
+# just returns the x coordinate
+print(coords)
+
+# to get both x, y coordinates needs to expand the label dims
+coords = torch.gather(centers, dim=0, index=torch.tensor([[test_label, test_label]]))
+print(coords)
 
 # test for all examples
 labels = labels.expand(100, 2)
