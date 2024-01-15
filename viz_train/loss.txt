@@ -1,0 +1,165 @@
+Epoch [1/150], Step [600/600], Loss: 2.3020
+Epoch [2/150], Step [600/600], Loss: 2.2994
+Epoch [3/150], Step [600/600], Loss: 2.2190
+Epoch [4/150], Step [600/600], Loss: 1.7764
+Epoch [5/150], Step [600/600], Loss: 1.5268
+Epoch [6/150], Step [600/600], Loss: 1.2543
+Epoch [7/150], Step [600/600], Loss: 1.0131
+Epoch [8/150], Step [600/600], Loss: 1.0190
+Epoch [9/150], Step [600/600], Loss: 0.7342
+Epoch [10/150], Step [600/600], Loss: 0.7622
+Accuracy of the network on the 10000 test images: 87.73 %
+Epoch [11/150], Step [600/600], Loss: 0.7950
+Epoch [12/150], Step [600/600], Loss: 0.6058
+Epoch [13/150], Step [600/600], Loss: 0.5768
+Epoch [14/150], Step [600/600], Loss: 0.5234
+Epoch [15/150], Step [600/600], Loss: 0.4397
+Epoch [16/150], Step [600/600], Loss: 0.4405
+Epoch [17/150], Step [600/600], Loss: 0.4336
+Epoch [18/150], Step [600/600], Loss: 0.3642
+Epoch [19/150], Step [600/600], Loss: 0.3049
+Epoch [20/150], Step [600/600], Loss: 0.3472
+Accuracy of the network on the 10000 test images: 98.09 %
+Epoch [21/150], Step [600/600], Loss: 0.2170
+Epoch [22/150], Step [600/600], Loss: 0.3197
+Epoch [23/150], Step [600/600], Loss: 0.2935
+Epoch [24/150], Step [600/600], Loss: 0.1778
+Epoch [25/150], Step [600/600], Loss: 0.2528
+Epoch [26/150], Step [600/600], Loss: 0.1725
+Epoch [27/150], Step [600/600], Loss: 0.1355
+Epoch [28/150], Step [600/600], Loss: 0.1285
+Epoch [29/150], Step [600/600], Loss: 0.1487
+Epoch [30/150], Step [600/600], Loss: 0.1178
+Accuracy of the network on the 10000 test images: 98.48 %
+Epoch [31/150], Step [600/600], Loss: 0.1421
+Epoch [32/150], Step [600/600], Loss: 0.1464
+Epoch [33/150], Step [600/600], Loss: 0.1004
+Epoch [34/150], Step [600/600], Loss: 0.0919
+Epoch [35/150], Step [600/600], Loss: 0.0930
+Epoch [36/150], Step [600/600], Loss: 0.1199
+Epoch [37/150], Step [600/600], Loss: 0.0832
+Epoch [38/150], Step [600/600], Loss: 0.0915
+Epoch [39/150], Step [600/600], Loss: 0.0903
+Epoch [40/150], Step [600/600], Loss: 0.0703
+Accuracy of the network on the 10000 test images: 98.57 %
+Epoch [41/150], Step [600/600], Loss: 0.0750
+Epoch [42/150], Step [600/600], Loss: 0.0820
+Epoch [43/150], Step [600/600], Loss: 0.0618
+Epoch [44/150], Step [600/600], Loss: 0.0544
+Epoch [45/150], Step [600/600], Loss: 0.0550
+Epoch [46/150], Step [600/600], Loss: 0.0755
+Epoch [47/150], Step [600/600], Loss: 0.0487
+Epoch [48/150], Step [600/600], Loss: 0.0552
+Epoch [49/150], Step [600/600], Loss: 0.0476
+Epoch [50/150], Step [600/600], Loss: 0.0474
+Accuracy of the network on the 10000 test images: 98.64 %
+Epoch [51/150], Step [600/600], Loss: 0.0648
+Epoch [52/150], Step [600/600], Loss: 0.0361
+Epoch [53/150], Step [600/600], Loss: 0.0841
+Epoch [54/150], Step [600/600], Loss: 0.0474
+Epoch [55/150], Step [600/600], Loss: 0.0429
+Epoch [56/150], Step [600/600], Loss: 0.0458
+Epoch [57/150], Step [600/600], Loss: 0.0364
+Epoch [58/150], Step [600/600], Loss: 0.0442
+Epoch [59/150], Step [600/600], Loss: 0.0446
+Epoch [60/150], Step [600/600], Loss: 0.0394
+Accuracy of the network on the 10000 test images: 98.68 %
+Epoch [61/150], Step [600/600], Loss: 0.0362
+Epoch [62/150], Step [600/600], Loss: 0.0366
+Epoch [63/150], Step [600/600], Loss: 0.0368
+Epoch [64/150], Step [600/600], Loss: 0.0381
+Epoch [65/150], Step [600/600], Loss: 0.0328
+Epoch [66/150], Step [600/600], Loss: 0.0572
+Epoch [67/150], Step [600/600], Loss: 0.0377
+Epoch [68/150], Step [600/600], Loss: 0.0285
+Epoch [69/150], Step [600/600], Loss: 0.0264
+Epoch [70/150], Step [600/600], Loss: 0.0369
+Accuracy of the network on the 10000 test images: 98.66 %
+Epoch [71/150], Step [600/600], Loss: 0.0263
+Epoch [72/150], Step [600/600], Loss: 0.0296
+Epoch [73/150], Step [600/600], Loss: 0.0219
+Epoch [74/150], Step [600/600], Loss: 0.0326
+Epoch [75/150], Step [600/600], Loss: 0.0297
+Epoch [76/150], Step [600/600], Loss: 0.0281
+Epoch [77/150], Step [600/600], Loss: 0.0277
+Epoch [78/150], Step [600/600], Loss: 0.0241
+Epoch [79/150], Step [600/600], Loss: 0.0485
+Epoch [80/150], Step [600/600], Loss: 0.0277
+Accuracy of the network on the 10000 test images: 98.64 %
+Epoch [81/150], Step [600/600], Loss: 0.0287
+Epoch [82/150], Step [600/600], Loss: 0.0273
+Epoch [83/150], Step [600/600], Loss: 0.0299
+Epoch [84/150], Step [600/600], Loss: 0.0269
+Epoch [85/150], Step [600/600], Loss: 0.0266
+Epoch [86/150], Step [600/600], Loss: 0.0254
+Epoch [87/150], Step [600/600], Loss: 0.0438
+Epoch [88/150], Step [600/600], Loss: 0.0218
+Epoch [89/150], Step [600/600], Loss: 0.0259
+Epoch [90/150], Step [600/600], Loss: 0.0220
+Accuracy of the network on the 10000 test images: 98.67 %
+Epoch [91/150], Step [600/600], Loss: 0.0222
+Epoch [92/150], Step [600/600], Loss: 0.0208
+Epoch [93/150], Step [600/600], Loss: 0.0233
+Epoch [94/150], Step [600/600], Loss: 0.0309
+Epoch [95/150], Step [600/600], Loss: 0.0210
+Epoch [96/150], Step [600/600], Loss: 0.0313
+Epoch [97/150], Step [600/600], Loss: 0.0216
+Epoch [98/150], Step [600/600], Loss: 0.0256
+Epoch [99/150], Step [600/600], Loss: 0.0346
+Epoch [100/150], Step [600/600], Loss: 0.0260
+Accuracy of the network on the 10000 test images: 98.56 %
+Epoch [101/150], Step [600/600], Loss: 0.0112
+Epoch [102/150], Step [600/600], Loss: 0.0096
+Epoch [103/150], Step [600/600], Loss: 0.0093
+Epoch [104/150], Step [600/600], Loss: 0.0089
+Epoch [105/150], Step [600/600], Loss: 0.0087
+Epoch [106/150], Step [600/600], Loss: 0.0077
+Epoch [107/150], Step [600/600], Loss: 0.0077
+Epoch [108/150], Step [600/600], Loss: 0.0073
+Epoch [109/150], Step [600/600], Loss: 0.0096
+Epoch [110/150], Step [600/600], Loss: 0.0073
+Accuracy of the network on the 10000 test images: 98.65 %
+Epoch [111/150], Step [600/600], Loss: 0.0069
+Epoch [112/150], Step [600/600], Loss: 0.0066
+Epoch [113/150], Step [600/600], Loss: 0.0071
+Epoch [114/150], Step [600/600], Loss: 0.0064
+Epoch [115/150], Step [600/600], Loss: 0.0061
+Epoch [116/150], Step [600/600], Loss: 0.0057
+Epoch [117/150], Step [600/600], Loss: 0.0058
+Epoch [118/150], Step [600/600], Loss: 0.0056
+Epoch [119/150], Step [600/600], Loss: 0.0062
+Epoch [120/150], Step [600/600], Loss: 0.0059
+Accuracy of the network on the 10000 test images: 98.66 %
+Epoch [121/150], Step [600/600], Loss: 0.0060
+Epoch [122/150], Step [600/600], Loss: 0.0055
+Epoch [123/150], Step [600/600], Loss: 0.0056
+Epoch [124/150], Step [600/600], Loss: 0.0053
+Epoch [125/150], Step [600/600], Loss: 0.0055
+Epoch [126/150], Step [600/600], Loss: 0.0053
+Epoch [127/150], Step [600/600], Loss: 0.0049
+Epoch [128/150], Step [600/600], Loss: 0.0053
+Epoch [129/150], Step [600/600], Loss: 0.0050
+Epoch [130/150], Step [600/600], Loss: 0.0048
+Accuracy of the network on the 10000 test images: 98.66 %
+Epoch [131/150], Step [600/600], Loss: 0.0056
+Epoch [132/150], Step [600/600], Loss: 0.0049
+Epoch [133/150], Step [600/600], Loss: 0.0045
+Epoch [134/150], Step [600/600], Loss: 0.0045
+Epoch [135/150], Step [600/600], Loss: 0.0046
+Epoch [136/150], Step [600/600], Loss: 0.0050
+Epoch [137/150], Step [600/600], Loss: 0.0047
+Epoch [138/150], Step [600/600], Loss: 0.0042
+Epoch [139/150], Step [600/600], Loss: 0.0044
+Epoch [140/150], Step [600/600], Loss: 0.0046
+Accuracy of the network on the 10000 test images: 98.64 %
+Epoch [141/150], Step [600/600], Loss: 0.0043
+Epoch [142/150], Step [600/600], Loss: 0.0041
+Epoch [143/150], Step [600/600], Loss: 0.0040
+Epoch [144/150], Step [600/600], Loss: 0.0042
+Epoch [145/150], Step [600/600], Loss: 0.0039
+Epoch [146/150], Step [600/600], Loss: 0.0038
+Epoch [147/150], Step [600/600], Loss: 0.0039
+Epoch [148/150], Step [600/600], Loss: 0.0043
+Epoch [149/150], Step [600/600], Loss: 0.0038
+Epoch [150/150], Step [600/600], Loss: 0.0040
+Accuracy of the network on the 10000 test images: 98.65 %
